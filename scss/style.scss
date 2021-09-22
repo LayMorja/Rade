@@ -155,9 +155,11 @@ html, body {
             transition: all 0.4s ease-in-out;
             padding: 125px 0 0 20px;
             transform: translate(0, -100%);
+		        visibility: hidden;
             overflow: auto;
             &.active {
                transform: translate(0, 0);
+               visibility: visible;
             }
          }
          &__list {
