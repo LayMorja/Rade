@@ -356,23 +356,23 @@ html, body {
 }
 
 .slide_01 {
-  background: url("../img/slider/01.jpg") center center/cover no-repeat;
+  background: url("../img/slider/01.jpg") center/cover no-repeat;
 }
 
 .slide_02 {
-  background: url("../img/slider/02.png") center center/cover no-repeat;
+  background: url("../img/slider/02.png") center/cover no-repeat;
 }
 
 .slide_03 {
-  background: url("../img/slider/03.jpg") center center/cover no-repeat;
+  background: url("../img/slider/03.jpg") center/cover no-repeat;
 }
 
 .slide_04 {
-  background: url("../img/slider/04.jpg") center center/cover no-repeat;
+  background: url("../img/slider/04.jpg") center/cover no-repeat;
 }
 
 .slide_05 {
-  background: url("../img/slider/05.jpg") center center/cover no-repeat;
+  background: url("../img/slider/05.jpg") center/cover no-repeat;
 }
 
 .slide__text {
@@ -418,9 +418,6 @@ html, body {
     font-size: 54px;
     padding: 0px 40px 20px 110px;
     line-height: 62px;
-    bottom: 50%;
-    -webkit-transform: translate(0, -50%);
-            transform: translate(0, -50%);
   }
 }
 
@@ -466,6 +463,12 @@ html, body {
   width: 0;
   height: 1080px;
   overflow: hidden;
+}
+
+@media (max-width: 600px) {
+  .slick-slide {
+    height: 768px;
+  }
 }
 
 /* Блок с точками слайдера */
