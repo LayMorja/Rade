@@ -199,19 +199,13 @@ html, body {
             }  
          }   
 }
-
-.slider {
-   position: relative;
-   max-width: 100vw;
-   overflow: hidden;
-}
 .slide {
    position: relative;
    &_01 {background: url("../img/slider/01.jpg") center/cover no-repeat;}
    &_02 {background: url("../img/slider/02.png") center/cover no-repeat;}
    &_03 {background: url("../img/slider/03.jpg") center/cover no-repeat;}
    &_04 {background: url("../img/slider/04.jpg") center/cover no-repeat;}
-   &_05 {background: url("../img/slider/05.jpg") center/cover no-repeat;}
+   &_05 {background: url("../img/slider/06.jpg") center/cover no-repeat;}
 
    &__text {
       color: #fff;
@@ -262,12 +256,14 @@ html, body {
 //Свойства сладйера ================================================================================================================================================================================================================================================
 .slick-slider{
    position: relative;
+   max-width: 100vw;
+   overflow: hidden;
 }
 /* Ограничивающая оболочка */
 .slick-list {
    max-width: 100vw;
    max-height: 100vh;
-   // overflow: hidden;
+   overflow: hidden;
 }
 /* Лента слайдов */
 .slick-track{
