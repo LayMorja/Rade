@@ -188,6 +188,7 @@ body.lock {
          &__list {
             flex-direction: column;
             border: none;
+            background: none;
             li {          
                padding: 10px 0px 10px 0px;     
                &:after {
@@ -268,11 +269,11 @@ body.lock {
          font-size: 42px;
          padding: 0px 30px 15px 90px;
          line-height: 42px;
+         bottom: 60px;
       }
       @media (max-width: 600px) {
          font-size: 30px;
          padding: 0px 20px 10px 70px;
-         line-height: 22px;
       }
    }
 }
