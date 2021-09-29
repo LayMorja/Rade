@@ -4,8 +4,8 @@ const body = document.querySelector('body');
 
 $(document).ready(function(){
    $('.slider').slick({
-      // autoplay: true,
-      // arrows: false,
+      autoplay: true,
+      arrows: true,
       dots: true,
       verticalSwiping: false,
       pauseOnHover: false,
