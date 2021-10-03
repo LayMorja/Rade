@@ -5,11 +5,9 @@ const body = document.querySelector('body');
 $(document).ready(function(){
    $('.slider').slick({
       autoplay: true,
-      arrows: true,
+      arrows: false,
       dots: true,
-      verticalSwiping: false,
       pauseOnHover: false,
-      slidesToShow: 1,
       draggable: false
    });
 });
