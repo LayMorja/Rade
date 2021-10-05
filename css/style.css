@@ -144,17 +144,14 @@ body::-webkit-scrollbar-thumb {
   border: 3px solid #fff;
 }
 
-.header {
-  background: -webkit-gradient(linear, left top, left bottom, from(#ffffff7a), to(#ffffff00));
-  background: linear-gradient(to bottom, #ffffff7a, #ffffff00);
-}
-
 .header__logo {
   margin: 20px 0px 25px 0px;
 }
 
-.logo {
-  position: relative;
+@media (max-width: 800px) {
+  .header__logo {
+    margin: 10px 0 0 0;
+  }
 }
 
 .logo__row {
@@ -183,6 +180,8 @@ body::-webkit-scrollbar-thumb {
 
 .menu__body {
   background: #479AB4;
+  position: relative;
+  z-index: 1;
 }
 
 .menu__list {
@@ -281,7 +280,7 @@ body::-webkit-scrollbar-thumb {
     position: fixed;
     width: 100vw;
     height: 100vh;
-    background: rgba(35, 17, 97, 0.9);
+    background: #295065;
     left: 0;
     top: 0;
     -webkit-transition: all 0.4s ease-in-out;
@@ -307,6 +306,8 @@ body::-webkit-scrollbar-thumb {
   }
   .menu__list li {
     padding: 10px 0px 10px 0px;
+    background: none;
+    border: none;
   }
   .menu__list li:after {
     display: none;
@@ -323,11 +324,12 @@ body::-webkit-scrollbar-thumb {
   .icon-menu {
     display: block;
     position: absolute;
-    top: 50px;
+    top: 40px;
     right: 30px;
     width: 30px;
     height: 18px;
     cursor: pointer;
+    z-index: 2;
   }
   .icon-menu span {
     -webkit-transition: all 0.45s ease;
@@ -405,6 +407,16 @@ body::-webkit-scrollbar-thumb {
   padding: 8px 15px 10px 15px;
 }
 
+@media (max-width: 800px) {
+  .slide__text {
+    font-size: 22px;
+    left: 35%;
+    -webkit-transform: translate(-35%, 0);
+            transform: translate(-35%, 0);
+    bottom: 25%;
+  }
+}
+
 .slick-slider {
   position: relative;
 }
@@ -456,6 +468,12 @@ body::-webkit-scrollbar-thumb {
 
 .slick-dots li.slick-active button:after {
   background: #fff;
+}
+
+.content {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
 }
 
 .content__row {
@@ -517,7 +535,7 @@ body::-webkit-scrollbar-thumb {
   display: block;
   background: #164352;
   height: 15px;
-  width: 102%;
+  width: 100%;
   position: absolute;
   bottom: 32px;
   left: -30px;
@@ -565,9 +583,32 @@ body::-webkit-scrollbar-thumb {
 
 @media (max-width: 800px) {
   .column__title {
+    padding: 0 0 30px 0;
     text-align: center;
+    font-size: 42px;
   }
   .column__title:after {
     left: 0;
+  }
+  .column__text {
+    font-size: 17px;
+    line-height: 20px;
+    padding: 0 20px;
+  }
+  .column__text p {
+    padding-bottom: 10px;
+  }
+  .column {
+    position: relative;
+    padding: 25px 0;
+  }
+  .column__label {
+    left: 25px;
+    right: 25px;
+    bottom: 0;
+    padding: 8px 12px;
+  }
+  .column__img {
+    max-width: 200px;
   }
 }
