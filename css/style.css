@@ -285,7 +285,7 @@ body::-webkit-scrollbar-thumb {
     top: 0;
     -webkit-transition: all 0.4s ease-in-out;
     transition: all 0.4s ease-in-out;
-    padding: 125px 0 0 20px;
+    padding: 20px 0 0 30px;
     -webkit-transform: translate(0, -100%);
             transform: translate(0, -100%);
     visibility: hidden;
@@ -461,13 +461,24 @@ body::-webkit-scrollbar-thumb {
   display: block;
   width: 12px;
   height: 12px;
-  border: 3px solid #164352;
+  border: 2px solid #164352;
   border-radius: 50%;
   background: #164352;
 }
 
 .slick-dots li.slick-active button:after {
   background: #fff;
+}
+
+@media (max-width: 800px) {
+  .slick-dots {
+    bottom: 20px;
+  }
+  .slick-dots li button::after {
+    width: 10px;
+    height: 10px;
+    border: 2px solid #164352;
+  }
 }
 
 .content {
@@ -494,8 +505,14 @@ body::-webkit-scrollbar-thumb {
   left: 0;
   display: block;
   width: 100%;
-  height: 70px;
+  height: 75px;
   background: url(../img/elements/untitled.svg) center/100% no-repeat;
+}
+
+@media (max-width: 800px) {
+  .content__row_bf:before {
+    background: url(../img/elements/untitled_m.svg) center/100% no-repeat;
+  }
 }
 
 @media (max-width: 800px) {
@@ -565,9 +582,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .column__label {
-  position: absolute;
-  bottom: -10px;
-  left: 125px;
+  display: block;
   color: #fff;
   max-width: 379px;
   margin: 0 auto;
@@ -575,7 +590,6 @@ body::-webkit-scrollbar-thumb {
   background: #164352;
   border-radius: 20px;
   padding: 13px 20px;
-  font-family: Montserrat;
   font-size: 13px;
   line-height: 16px;
   text-transform: uppercase;
@@ -603,12 +617,14 @@ body::-webkit-scrollbar-thumb {
     padding: 25px 0;
   }
   .column__label {
-    left: 25px;
-    right: 25px;
-    bottom: 0;
+    max-width: 320px;
     padding: 8px 12px;
   }
   .column__img {
     max-width: 200px;
   }
+}
+
+object {
+  display: block;
 }
