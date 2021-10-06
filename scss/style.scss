@@ -21,6 +21,16 @@ html, body {
 body.lock {
    overflow: hidden;
 }
+body.touch {
+   .arrow {
+      display: block;
+   }
+}
+body.mouse {
+   .arrow {
+      display: none;
+   }
+}
 
 .wrapper {
    min-height: 100%;
@@ -120,6 +130,7 @@ body::-webkit-scrollbar-thumb {
 		&__list {
          display: flex;
          align-items: center;
+         justify-content: center;
          padding: 10px 0px 8px 0px;
          & > li {
             position: relative;    
@@ -152,7 +163,7 @@ body::-webkit-scrollbar-thumb {
                display: none;
                position: absolute;
                z-index: 2;
-               left: 25px;
+               left: 0;
                min-width: 250px;
                // transform: skewX(20deg);
                padding-top: 2px;
@@ -179,7 +190,7 @@ body::-webkit-scrollbar-thumb {
                   text-align: center;
                   margin: 0 auto;
                   .submenu {
-                     position: static;
+                     // position: static;
                   }
                }
             }    
@@ -252,7 +263,8 @@ body::-webkit-scrollbar-thumb {
             }
          }
          &__list {
-            flex-direction: column;
+            display: block;
+            max-width: 600px;
             border: none;
             background: none;
             li {          
@@ -268,7 +280,8 @@ body::-webkit-scrollbar-thumb {
             text-shadow: none;
             color: #fff;
             font-size: 20px;
-            padding: 8px 40px;
+            padding: 8px 0;
+            margin-right: 40px;
          }
       }
 }
