@@ -38,7 +38,7 @@ body.mouse {
    flex-direction: column;
 }
 .container {
-   max-width: 95%;
+   max-width: 100%;
    padding: 0 15px;
    margin: 0 auto;
    // @media (max-width: 1700px) {
@@ -267,7 +267,7 @@ body::-webkit-scrollbar-thumb {
          }
          &__list {
             display: block;
-            max-width: 600px;
+            // max-width: 600px;
             border: none;
             background: none;
             li {          
@@ -292,7 +292,7 @@ body::-webkit-scrollbar-thumb {
 .icon-menu {
       @media (max-width: 800px) {
          display: block;
-         position: absolute;
+         position: fixed;
          top: 40px;
          right: 30px;
          width: 30px;
@@ -511,7 +511,6 @@ body::-webkit-scrollbar-thumb {
       line-height: 89px;
       padding: 0px 10px 10px 0px;
       color: #fff;
-      // overflow: hidden;
       &:after {
          content: '';
          display: block;
@@ -649,7 +648,6 @@ body::-webkit-scrollbar-thumb {
          flex-direction: column;
       }
       &__block {
-         // flex: 0 1 80%;
          border-radius: 5px;
          margin: 10px 8px;
          &:not(:nth-child(2n)) {
@@ -702,7 +700,7 @@ body::-webkit-scrollbar-thumb {
       margin-right: 30px;
    }
 
-   @media (max-width: 800px) {
+   @media (max-width: 1000px) {
       flex-direction: column;
       &__content {
          border-radius: 8px;
@@ -710,10 +708,6 @@ body::-webkit-scrollbar-thumb {
       }
       &__image {
          // display: none;
-      }
-      &__icon {
-         position: static;
-         margin: 10px auto;
       }
       &__title {
          font-size: 20px;

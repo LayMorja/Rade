@@ -110,7 +110,7 @@ body.mouse .arrow {
 }
 
 .container {
-  max-width: 95%;
+  max-width: 100%;
   padding: 0 15px;
   margin: 0 auto;
 }
@@ -330,7 +330,6 @@ body::-webkit-scrollbar-thumb {
   }
   .menu__list {
     display: block;
-    max-width: 600px;
     border: none;
     background: none;
   }
@@ -353,7 +352,7 @@ body::-webkit-scrollbar-thumb {
 @media (max-width: 800px) {
   .icon-menu {
     display: block;
-    position: absolute;
+    position: fixed;
     top: 40px;
     right: 30px;
     width: 30px;
@@ -809,7 +808,7 @@ body::-webkit-scrollbar-thumb {
   margin-right: 30px;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
   .block {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -819,10 +818,6 @@ body::-webkit-scrollbar-thumb {
   .block__content {
     border-radius: 8px;
     padding: 9px 0px 9px 17px;
-  }
-  .block__icon {
-    position: static;
-    margin: 10px auto;
   }
   .block__title {
     font-size: 20px;
