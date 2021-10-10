@@ -67,6 +67,10 @@ body::-webkit-scrollbar-thumb {
    border: 3px solid #fff;
 }
 
+.clearfix {
+   clear: both;
+}
+
 
 //Хэдер ================================================================================================================================================================================================================================================
 .header {
@@ -721,9 +725,79 @@ body::-webkit-scrollbar-thumb {
 
 //================================================================================================================================================================================================================================================
 
-object {
-   display: block;
+.ideas {
+
+   &__row {
+      display: flex;
+      justify-content: center;
+      padding: 0 60px;
+      // margin: 0 -150px;
+   }
+
+   &__column {
+      flex: 0 1 50%;
+      // margin: 0 75px;
+      &:first-child {
+         margin-right: 150px;
+      }
+   }
+
+   &__title {
+      font-size: 64px;
+      line-height: 95px;
+      text-align: center;
+      padding: 20px 0px 40px 0px;
+   }
+
+   &__block {
+      background: rgba(45, 109, 141, 0.57);
+      border-radius: 60px;
+      padding: 25px 85px;
+   }
+   @media (max-width: 800px) {
+      &__row {
+         flex-direction: column;
+      }
+      &__column {
+         &:first-child {
+            margin-right: 0;
+         }
+      }
+   }
 }
+.rent {
+   margin-right: 2%;
+   &__block {
+      display: block;
+      &:not(:last-child) {
+         padding-bottom: 22px;
+      }
+   }
+
+   &__title {
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 36px;
+      color: #FFFFFF;
+      padding: 0px 0px 7px 15px;
+   }
+
+   &__text {
+      font-size: 14px;
+      line-height: 17px;
+      text-transform: uppercase;
+      color: #D9F2FF;
+      background: #2D7E97;
+      padding: 15px 0px 15px 15px;
+   }
+
+   &__image {
+      float: right;
+      padding-left: 70px;
+      text-align: center;
+   }
+}
+
 
 //================================================================================================================================================================================================================================================
 
