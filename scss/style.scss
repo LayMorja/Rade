@@ -80,8 +80,9 @@ body::-webkit-scrollbar-thumb {
    // left: 50%;
    // transform: translate(-50%, 0);
    // background: linear-gradient(to bottom, #ffffff7a, #ffffff00);
-   &__logo {   
-      margin: 20px 0px 25px 0px;
+   &__logo {  
+      max-height: 125px;    
+      margin: 15px 0px;
       @media (max-width: 800px) {
          margin: 10px 0 0 0;
       }
@@ -90,7 +91,7 @@ body::-webkit-scrollbar-thumb {
 
 //Верхний логотип в хэдере ================================================================================================================================================================================================================================================
 .logo {
-		&__row {         
+		&__row {  
          display: flex;
          align-items: center;
          justify-content: space-between;
@@ -135,7 +136,7 @@ body::-webkit-scrollbar-thumb {
          display: flex;
          align-items: center;
          justify-content: center;
-         padding: 10px 0px 8px 0px;
+         padding: 10px 0px 6px 0px;
          & > li {
             position: relative;    
             border: 1px solid #fff;
@@ -603,7 +604,23 @@ body::-webkit-scrollbar-thumb {
 
 
 //================================================================================================================================================================================================================================================
-
+.button {
+   display: flex;
+   justify-content: center;   
+   a {
+      background: rgba(217, 242, 255, 0.8);
+      border-radius: 15px;
+      line-height: 17px;
+      text-transform: uppercase;
+      color: #285064;
+      padding: 7px 15px 7px 15px;
+      transition: all 0.3s ease-in-out;
+      &:hover {
+         background: #285064;
+         color: rgba(217, 242, 255, 0.8);
+      }
+   }
+}
 .news {
    background: linear-gradient(0deg, #2D7E97, #2D7E97);
    &__title {
@@ -630,21 +647,6 @@ body::-webkit-scrollbar-thumb {
 
    &__button {
       padding: 0px 0px 60px 0px;
-      display: flex;
-      justify-content: center;
-      a {
-         background: rgba(217, 242, 255, 0.8);
-         border-radius: 10px;
-         line-height: 17px;
-         text-transform: uppercase;
-         color: #285064;
-         padding: 7px 15px 7px 15px;
-         transition: all 0.3s ease-in-out;
-         &:hover {
-            background: #285064;
-            color: rgba(217, 242, 255, 0.8);
-         }
-      }
    }
    
    @media (max-width: 800px) {
@@ -855,15 +857,46 @@ body::-webkit-scrollbar-thumb {
       color: #494949;
       padding: 10px 20px;
       margin-bottom: 14px;
-      transition: all 0.4s ease-in-out;
+      transition: all 0.3s ease;
       &:focus {
          box-shadow: 0px 0px 3px 2px #285064;
       }
    }
    &__text {
       border-radius: 20px 20px 30px 30px;
-      height: 357px;
+      height: 314px;
       resize: none;
+   }
+
+   &__submit {
+      position: relative;
+      background: #2D7E97;
+      border-radius: 23px;
+      font-family: Oswald;
+      font-size: 24px;
+      // text-align: center;
+      color: #FFFFFF;
+      padding: 0px 15px 7px 15px;
+      transition: all 0.3s ease-in-out;
+      &:hover {
+         background: #285064;
+         color: #fff;
+      }
+      &:after {
+         content: '';
+         display: block;
+         background: url(../img/elements/submit_ar.svg) center no-repeat;
+         width: 100px;
+         height: 100px;
+         position: absolute;
+         right: 0;
+         top: 50%;
+         margin-top: -10px;
+      }
+   }
+   &__submit-icon {
+      margin-bottom: -6px;
+      margin-left: 10px;
    }
 }
 
