@@ -654,7 +654,7 @@ body::-webkit-scrollbar-thumb {
   }
   .column__text {
     text-transform: none;
-    font-size: 17px;
+    font-size: 16px;
     line-height: 16px;
     padding: 0 20px;
   }
@@ -842,6 +842,12 @@ body::-webkit-scrollbar-thumb {
   }
   .block__description {
     font-size: 16px;
+  }
+}
+
+@media (max-width: 767px) {
+  .block__description {
+    font-size: 14px;
     text-transform: none;
   }
 }
@@ -934,7 +940,7 @@ body::-webkit-scrollbar-thumb {
     border-radius: 20px;
   }
   .ideas__block.rent {
-    padding: 15px 40px;
+    padding: 20px 15px;
   }
   .ideas__block.idea {
     padding: 12px 15px;

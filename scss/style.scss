@@ -591,7 +591,7 @@ body::-webkit-scrollbar-thumb {
       }
       &__text {
          text-transform: none;
-         font-size: 17px;
+         font-size: 16px;
          line-height: 16px;
          padding: 0 20px;
          p {
@@ -733,6 +733,11 @@ body::-webkit-scrollbar-thumb {
       }
       &__description {
          font-size: 16px;
+      }
+   }
+   @media (max-width: 767px) {
+      &__description {
+         font-size: 14px;
          text-transform: none;
       }
    }
@@ -810,7 +815,7 @@ body::-webkit-scrollbar-thumb {
       &__block {
          border-radius: 20px;         
          &.rent { 
-         padding: 15px 40px;
+         padding: 20px 15px;
          }
          &.idea {
             padding: 12px 15px;
