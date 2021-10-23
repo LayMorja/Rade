@@ -283,9 +283,9 @@ body::-webkit-scrollbar-thumb {
 .menu__link_small {
   font-weight: normal;
   font-size: 14px;
-  margin: 10px 0;
+  margin: 5px 0;
   text-transform: none;
-  color: #f5f5f5;
+  color: #D9F2FF;
 }
 
 .menu__link_big {
@@ -653,8 +653,9 @@ body::-webkit-scrollbar-thumb {
     bottom: 36px;
   }
   .column__text {
+    text-transform: none;
     font-size: 17px;
-    line-height: 20px;
+    line-height: 16px;
     padding: 0 20px;
   }
   .column__text p {
@@ -841,6 +842,7 @@ body::-webkit-scrollbar-thumb {
   }
   .block__description {
     font-size: 16px;
+    text-transform: none;
   }
 }
 
@@ -905,6 +907,9 @@ body::-webkit-scrollbar-thumb {
         -ms-flex-direction: column;
             flex-direction: column;
     padding: 0 15px;
+  }
+  .ideas__column {
+    margin: 20px 0;
   }
   .ideas__column:first-child {
     margin-right: 0;
@@ -985,6 +990,8 @@ body::-webkit-scrollbar-thumb {
   }
   .rent__text {
     border-radius: 8px;
+    text-transform: none;
+    padding: 10px;
   }
 }
 

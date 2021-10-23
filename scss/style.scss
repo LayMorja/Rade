@@ -230,9 +230,9 @@ body::-webkit-scrollbar-thumb {
          &_small {
             font-weight: normal;
             font-size: 14px;
-            margin: 10px 0;
+            margin: 5px 0;
             text-transform: none;
-            color: #f5f5f5;
+            color: #D9F2FF;
          }
          &_big {
             font-size: 18px;
@@ -590,8 +590,9 @@ body::-webkit-scrollbar-thumb {
          }
       }
       &__text {
+         text-transform: none;
          font-size: 17px;
-         line-height: 20px;
+         line-height: 16px;
          padding: 0 20px;
          p {
             padding-bottom: 10px;
@@ -732,6 +733,7 @@ body::-webkit-scrollbar-thumb {
       }
       &__description {
          font-size: 16px;
+         text-transform: none;
       }
    }
 }
@@ -789,6 +791,7 @@ body::-webkit-scrollbar-thumb {
          &:first-child {
             margin-right: 0;
          }
+         margin: 20px 0;
       }
       &__title {
          font-size: 48px;
@@ -857,6 +860,8 @@ body::-webkit-scrollbar-thumb {
       }
       &__text {
          border-radius: 8px;
+         text-transform: none;
+         padding: 10px;
       }
    }
 }
