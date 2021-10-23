@@ -194,25 +194,53 @@ body::-webkit-scrollbar-thumb {
   background: #479AB4;
   position: relative;
   z-index: 1;
+  padding: 10px 0px 6px 0px;
 }
 
 .menu__list {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 10px 0px 6px 0px;
 }
 
 .menu__list > li {
   position: relative;
-  border: 1px solid #fff;
   background: #295065;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+}
+
+.menu__list > li:after {
+  content: '';
+  width: 1px;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  z-index: 6;
+  background: #fff;
+  -webkit-transform: skew(-20deg);
+          transform: skew(-20deg);
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  margin: 0 0 0 -15px;
+}
+
+.menu__list > li:last-child {
+  border-radius: 0 5px 5px 0;
+}
+
+.menu__list > li:last-child:after {
+  display: none;
+}
+
+.menu__list > li:first-child {
+  border-radius: 5px 0 0 5px;
 }
 
 .menu__list > li .submenu {
@@ -221,7 +249,6 @@ body::-webkit-scrollbar-thumb {
   z-index: 2;
   left: 0;
   min-width: 250px;
-  padding-top: 2px;
 }
 
 .menu__list > li .submenu li a {
@@ -232,7 +259,6 @@ body::-webkit-scrollbar-thumb {
   padding: 7px 10px;
   background: #295065;
   font-size: 16px;
-  margin-bottom: 1px;
 }
 
 .menu__list > li .submenu li a:hover {
@@ -257,9 +283,6 @@ body::-webkit-scrollbar-thumb {
 }
 
 @media (min-width: 800px) {
-  .menu__list > li:hover {
-    background: #617d8d;
-  }
   .menu__list > li:hover .submenu {
     display: block;
   }
@@ -903,7 +926,7 @@ body::-webkit-scrollbar-thumb {
 
 .ideas__block {
   background: rgba(45, 109, 141, 0.57);
-  border-radius: 60px;
+  border-radius: 35px;
 }
 
 @media (max-width: 800px) {
@@ -948,7 +971,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .vacancies {
-  padding: 25px 80px;
+  padding: 32px 38px;
 }
 
 .vacancies__photo {
@@ -998,6 +1021,9 @@ body::-webkit-scrollbar-thumb {
   }
   .vacancies__text {
     text-transform: none;
+  }
+  .vacancies {
+    padding: 20px 15px;
   }
 }
 

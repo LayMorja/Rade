@@ -131,40 +131,40 @@ body::-webkit-scrollbar-thumb {
          background: #479AB4;
          position: relative;
          z-index: 1;
+         padding: 10px 0px 6px 0px;
 		}
 
 		&__list {
+         width: 100%;
          display: flex;
-         align-items: center;
          justify-content: center;
-         padding: 10px 0px 6px 0px;
          & > li {
             position: relative;    
-            border: 1px solid #fff;
-            // transform: skewX(-20deg);
             background: #295065;
-            // &:after {
-            //    content: '';
-            //    width: 1px;
-            //    height: 100%;
-            //    display: flex;
-            //    z-index: 6;
-            //    background: #164352;
-            //    transform: skew(-20deg);
-            //    position: absolute;
-            //    right: 0;
-            //    bottom: 0;
-            //    margin: 0 0 0 -15px;
-            // }
-            // &:last-child {
-            //    border-radius: 0 5px 5px 0;
-            //    &:after {
-            //       // display: none;
-            //    }
-            // }
-            // &:first-child {
-            //    border-radius: 5px 0 0 5px;
-            // }
+            border-top: 1px solid #fff;
+            border-bottom: 1px solid #fff;
+            &:after {
+               content: '';
+               width: 1px;
+               height: 100%;
+               display: flex;
+               z-index: 6;
+               background: #fff;
+               transform: skew(-20deg);
+               position: absolute;
+               right: 0;
+               bottom: 0;
+               margin: 0 0 0 -15px;
+            }
+            &:last-child {
+               border-radius: 0 5px 5px 0;
+               &:after {
+                  display: none;
+               }
+            }
+            &:first-child {
+               border-radius: 5px 0 0 5px;
+            }
             .submenu {
                display: none;
                position: absolute;
@@ -172,7 +172,6 @@ body::-webkit-scrollbar-thumb {
                left: 0;
                min-width: 250px;
                // transform: skewX(20deg);
-               padding-top: 2px;
                li {
                   a {
                      border: 1px solid #fff;
@@ -182,7 +181,6 @@ body::-webkit-scrollbar-thumb {
                      padding: 7px 10px;
                      background: #295065;
                      font-size: 16px;
-                     margin-bottom: 1px;
                      &:hover {
                         background: rgb(97, 125, 141);  
                      }
@@ -205,7 +203,6 @@ body::-webkit-scrollbar-thumb {
             }    
             @media (min-width: 800px) {
                &:hover {
-                  background: rgb(97, 125, 141);
                   .submenu {display: block;}
                }
             }
@@ -785,7 +782,7 @@ body::-webkit-scrollbar-thumb {
 
    &__block {
       background: rgba(45, 109, 141, 0.57);
-      border-radius: 60px;
+      border-radius: 35px;
    }
    @media (max-width: 800px) {
       &__row {
@@ -824,7 +821,7 @@ body::-webkit-scrollbar-thumb {
    }
 }
 .vacancies {
-   padding: 25px 80px;
+   padding: 32px 38px;
    &__photo {
       position: relative;
       img {
@@ -867,6 +864,9 @@ body::-webkit-scrollbar-thumb {
       }
       &__text {
          text-transform: none;
+      }
+      & {
+         padding: 20px 15px;
       }
    }
 }
