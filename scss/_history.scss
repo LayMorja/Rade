@@ -1,0 +1,88 @@
+//Верхняя представительная секция ================================================================================================================================================================================================================================================
+.about {
+   background: #2D7E97;
+   &__upper {
+      position: relative;
+   }
+   &__img {
+      width: 100%;
+      object-fit: cover;
+   }
+
+   &__name {
+      color: #FFFFFF;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      @include adaptiv-font(72, 30);
+      text-shadow: 2px 2px 5px #00000067;
+   }
+
+   &__text {
+      @include adaptiv-font(20, 16);
+      font-weight: medium;
+      text-align: justify;
+      text-transform: uppercase;
+      line-height: 124.4%;
+      padding: 40px 0;
+      @media screen and (max-width: 550px) {
+         text-transform: none;
+         line-height: 110%;
+      }
+   }
+}
+
+//Основной блок с историей ================================================================================================================================================================================================================================================
+.history {
+
+   &__title {
+      padding: 10px 0;
+      border-top: 20px solid #D9F2FF;      
+      border-bottom: 20px solid #D9F2FF;
+      text-align: center;
+   }
+
+   &__body {
+      display: flex;
+      justify-content: space-between;
+   }
+
+   &__chronology {
+      flex: 0 1 170px;
+      margin-top: 25px;
+   }
+
+   &__content {
+      margin-top: 31px;
+      flex: 0 1 1410px;
+      font-weight: 500;
+      @include adaptiv-font(20, 16);
+      line-height: 124.4%;
+      text-align: justify;
+      text-transform: uppercase;
+      color: #285064;
+      p {
+         margin-bottom: 25px;
+      }
+      p.bigMrg {
+         margin-bottom: 36px;
+      }
+   }
+}
+.content {
+
+   &__img {
+      border-radius: 50%;
+      overflow: hidden;
+      &_r {
+         float: right;
+         margin: 10px 0 10px 57px;
+      }
+      &_l {
+         float: left;
+         margin-right: 50px;
+         margin: 50px 50px 60px 0;
+      }
+   }
+}

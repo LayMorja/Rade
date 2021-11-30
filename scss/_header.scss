@@ -1,0 +1,246 @@
+//Хэдер ================================================================================================================================================================================================================================================
+.header {
+   &__logo {  
+      max-height: 125px;    
+      margin: 15px 0px;
+      @media (max-width: 800px) {
+         margin: 10px 0 0 0;
+      }
+   }
+}
+
+//Верхний логотип в хэдере ================================================================================================================================================================================================================================================
+.logo {
+		&__row {
+         display: flex;
+         align-items: center;
+         justify-content: space-between;
+         @media (max-width: 900px) {
+            & {
+               justify-content: center;
+               :nth-child(2),
+               :nth-child(3) {
+                  display: none;
+               }
+            }
+         }
+		}
+}
+
+//Главное меню ================================================================================================================================================================================================================================================
+.arrow {
+   position: absolute;
+   right: 0px;
+   top: 26px;
+   width: 0;
+   height: 0;
+   border-top: 8px solid #fff;
+   border-left: 8px solid transparent;
+   border-right: 8px solid transparent;
+   // transform: skew(20deg);
+   transition: all 0.4s ease-in-out;
+   &.active {
+      transform: rotate(180deg);
+   }
+}
+
+.menu {
+
+		&__body {
+         background: #479AB4;
+         position: relative;
+         z-index: 1;
+         padding: 10px 0px 6px 0px;
+		}
+
+		&__list {
+         width: 100%;
+         display: flex;
+         justify-content: center;
+         & > li {
+            position: relative;    
+            background: #295065;
+            border-top: 1px solid #fff;
+            border-bottom: 1px solid #fff;
+            &:after {
+               content: '';
+               width: 1.5px;
+               height: 100%;
+               display: flex;
+               z-index: 6;
+               background: #fff;
+               transform: skew(-20deg);
+               position: absolute;
+               right: 0;
+               bottom: 0;
+               margin: 0 0 0 -15px;
+            }
+            &:last-child {
+               // border-radius: 0 5px 5px 0;
+               border-right: 1px solid #fff;
+               &:after {
+                  display: none;
+               }
+            }
+            &:first-child {
+               // border-radius: 5px 0 0 5px;
+               border-left: 1px solid #fff;
+            }
+            .submenu {
+               display: none;
+               position: absolute;
+               z-index: 2;
+               left: 0;
+               min-width: 275px;
+               background: #295065;
+               border: 1px solid #fff;
+               border-radius: 0 0 3px 3px;
+               li {
+                  a {
+                     border-radius: 2px;
+                     display: block;
+                     color: #fff;
+                     padding: 7px 10px;
+                     font-size: 16px;
+                     &:hover {
+                        background: rgb(97, 125, 141);  
+                     }
+                     @media (max-width: 800px) {
+                        display: inline-flex;
+                     }
+                  }
+               }
+               &.open {
+                  display: block;
+                  position: relative;
+                  left: 0;
+                  top: 100%;
+                  text-align: center;
+                  margin: 0 auto;
+               }
+            }    
+            @media (min-width: 800px) {
+               & {
+                  .submenu {
+                     display: block;
+                     visibility: hidden;
+                     pointer-events: none;
+                     opacity: 0;
+                     transform: translate(0, 10px);
+                     transition: all 0.35s ease;
+                  }
+               }
+               &:hover {
+                  .submenu {                     
+                     visibility: visible;
+                     pointer-events: auto;
+                     opacity: 1;
+                     transform: translate(0, 0);
+                  }
+               }
+            }
+         }
+      }
+
+		&__link {
+         position: relative;
+         display: block; 
+         padding: 3px 35px;   
+         font-family: Gothic;
+         font-size: 22px;
+         line-height: 27px;
+         text-transform: uppercase;
+         color: #fff;
+         &:last-child {
+            &:after {
+               display: none;
+            }
+         }
+         &_small {
+            font-weight: normal;
+            font-size: 14px;
+            margin: 5px 0;
+            text-transform: none;
+            color: #D9F2FF;
+         }
+         &_big {
+            font-size: 18px;
+            font-weight: 600;
+         }
+		}
+
+      @media (max-width: 1170px) {
+         &__link {
+            font-size: 20px;
+            padding: 3px 20px;
+         }
+      }
+      @media (max-width: 960px) {
+         &__link {
+            font-size: 18px;
+            padding: 3px 13px;
+         }
+      }
+      @media (max-width: 800px) {
+         &__body {
+            text-align: center;
+            position: fixed;
+            width: 100vw;
+            height: 100vh;
+            background: #295065;
+            left: 0;
+            top: 0;
+            transition: all 0.4s ease-in-out;
+            transform: translate(0, -100%);
+            padding: 50px 0px 25px 0px;
+            visibility: hidden;
+            overflow: auto;
+            &.active {
+               transform: translate(0, 0);
+               visibility: visible;
+            }
+         }
+         &__list {
+            display: block;
+            border: none;
+            background: none;
+            li {          
+               padding: 6px 0px 6px 0px;
+               background: none;
+               border: none;  
+               &:after {
+                  display: none;
+               }
+            }
+         }
+         &__link {
+            text-shadow: none;
+            color: #fff;
+            font-size: 20px;
+            padding: 8px 0;
+         }
+      }
+}
+
+//Иконка "меню-бургер" ================================================================================================================================================================================================================================================
+.icon-menu {
+      @media (max-width: 800px) {
+         display: block;
+         position: fixed;
+         top: 25px;
+         right: 20px;
+         width: 30px;
+         height: 18px;
+         cursor: pointer;
+         z-index: 2;
+         span {transition: all 0.45s ease; top: 8px; left: 0; position: absolute; width: 100%; height: 2px; background: #666; box-shadow: 0 0 5px #fff;
+            &:first-child {top: 0;}
+            &:last-child{top: auto; bottom: 0;}
+         }}
+         &.active {
+            span {transform: scale(0); background: #fff; box-shadow: none;
+               &:first-child{transform: rotate(-45deg); top: 8px;}
+               &:last-child{transform: rotate(45deg); bottom: 8px}
+            }  
+         }   
+}
