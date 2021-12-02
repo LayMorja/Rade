@@ -36,16 +36,20 @@
 //Основной блок с историей ================================================================================================================================================================================================================================================
 .history {
 
+   .title {
+      text-align: center;
+   }
+
    &__title {
       padding: 10px 0;
-      border-top: 20px solid #D9F2FF;      
+      border-top: 20px solid #D9F2FF;
       border-bottom: 20px solid #D9F2FF;
-      text-align: center;
    }
 
    &__body {
       display: flex;
       justify-content: space-between;
+      margin: 40px 0;
    }
 
    &__chronology {
@@ -67,6 +71,14 @@
       }
       p.bigMrg {
          margin-bottom: 36px;
+      }
+   }
+
+   &__full {
+      margin: 40px 0 20px 0;
+      img {
+         width: 100%;
+         object-fit: cover;
       }
    }
 }

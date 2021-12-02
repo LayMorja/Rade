@@ -105,6 +105,10 @@
                      &:hover {
                         background: rgb(97, 125, 141);  
                      }
+                     &.active {
+                        background: rgb(97, 125, 141);
+                        border-radius: 0px;
+                     }
                      @media (max-width: 800px) {
                         display: inline-flex;
                      }

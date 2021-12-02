@@ -1174,6 +1174,11 @@ h1, h2, h3, h4, h5, h6 {
   background: #617d8d;
 }
 
+.menu__list > li .submenu li a.active {
+  background: #617d8d;
+  border-radius: 0px;
+}
+
 @media (max-width: 800px) {
   .menu__list > li .submenu li a {
     display: -webkit-inline-box;
@@ -1389,11 +1394,14 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+.history .title {
+  text-align: center;
+}
+
 .history__title {
   padding: 10px 0;
   border-top: 20px solid #D9F2FF;
   border-bottom: 20px solid #D9F2FF;
-  text-align: center;
 }
 
 .history__body {
@@ -1403,6 +1411,7 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin: 40px 0;
 }
 
 .history__chronology {
@@ -1431,6 +1440,16 @@ h1, h2, h3, h4, h5, h6 {
 
 .history__content p.bigMrg {
   margin-bottom: 36px;
+}
+
+.history__full {
+  margin: 40px 0 20px 0;
+}
+
+.history__full img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .content__img {
