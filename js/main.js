@@ -44,3 +44,4 @@ iconMenu.addEventListener('click', function() {
    menuBody.classList.toggle('active');
    body.classList.toggle('lock');
 })
+

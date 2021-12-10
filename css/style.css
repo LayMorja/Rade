@@ -182,7 +182,7 @@ body::-webkit-scrollbar-thumb {
 .title {
   font-family: Oswald;
   font-size: calc(35px + 29 * ((100vw - 320px) / 1600));
-  line-height: 95px;
+  line-height: calc(45px + 50 * ((100vw - 320px) / 1600));
   text-transform: uppercase;
   color: #285064;
 }
@@ -310,7 +310,6 @@ body::-webkit-scrollbar-thumb {
 @media (max-width: 800px) {
   .column__title {
     text-align: center;
-    line-height: 50px;
     padding: 0 0 20px 0;
   }
   .column__title:after {
@@ -563,7 +562,7 @@ body::-webkit-scrollbar-thumb {
 .ideas__title {
   white-space: nowrap;
   font-size: calc(35px + 29 * ((100vw - 320px) / 1600));
-  line-height: 95px;
+  line-height: calc(45px + 50 * ((100vw - 320px) / 1600));
   text-align: center;
   padding: 20px 0px 40px 0px;
 }
@@ -608,7 +607,6 @@ body::-webkit-scrollbar-thumb {
   }
   .ideas__title {
     padding: 20px 0 0 0;
-    line-height: 60px;
     padding: 0px 0px 7px 15px;
   }
   .ideas__title_l {
@@ -721,8 +719,10 @@ body::-webkit-scrollbar-thumb {
 }
 
 .idea__input:focus, .idea__text:focus {
+  color: #292929;
   -webkit-box-shadow: 0px 0px 3px 2px #285064;
           box-shadow: 0px 0px 3px 2px #285064;
+  background: #fdfbf6;
 }
 
 .idea__text {
@@ -771,6 +771,18 @@ body::-webkit-scrollbar-thumb {
 .footer {
   background: #2D7E97;
   border-top: 20px solid #D9F2FF;
+}
+
+@media (max-width: 1690px) {
+  .footer > .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
 }
 
 .footer__row {
@@ -1357,10 +1369,6 @@ h1, h2, h3, h4, h5, h6 {
   background: #2D7E97;
 }
 
-.about__upper {
-  position: relative;
-}
-
 .about__img {
   width: 100%;
   -o-object-fit: cover;
@@ -1368,14 +1376,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .about__name {
+  text-align: center;
   color: #FFFFFF;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
   font-size: calc(30px + 42 * ((100vw - 320px) / 1600));
   text-shadow: 2px 2px 5px #00000067;
+  padding: 15px 10px;
 }
 
 .about__text {
@@ -1384,7 +1389,8 @@ h1, h2, h3, h4, h5, h6 {
   text-align: justify;
   text-transform: uppercase;
   line-height: 124.4%;
-  padding: 40px 0;
+  padding: 0 0 40px 0;
+  position: relative;
 }
 
 @media screen and (max-width: 550px) {
@@ -1396,12 +1402,14 @@ h1, h2, h3, h4, h5, h6 {
 
 .history .title {
   text-align: center;
+  padding: 40px 0 20px 0;
 }
 
-.history__title {
+.history__title.title {
   padding: 10px 0;
   border-top: 20px solid #D9F2FF;
   border-bottom: 20px solid #D9F2FF;
+  margin-bottom: 20px;
 }
 
 .history__body {
@@ -1411,21 +1419,22 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin: 40px 0;
 }
 
-.history__chronology {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 1 170px;
-          flex: 0 1 170px;
-  margin-top: 25px;
+.history__body:last-child {
+  margin-bottom: 60px;
+}
+
+.history__chronology img {
+  height: 100%;
 }
 
 .history__content {
-  margin-top: 31px;
+  margin-left: 30px;
+  padding-top: 6px;
   -webkit-box-flex: 0;
-      -ms-flex: 0 1 1410px;
-          flex: 0 1 1410px;
+      -ms-flex: 0 1 1400px;
+          flex: 0 1 1400px;
   font-weight: 500;
   font-size: calc(16px + 4 * ((100vw - 320px) / 1600));
   line-height: 124.4%;
@@ -1435,7 +1444,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .history__content p {
-  margin-bottom: 25px;
+  margin-bottom: 34px;
 }
 
 .history__content p.bigMrg {
@@ -1443,13 +1452,22 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .history__full {
-  margin: 40px 0 20px 0;
+  padding-bottom: 40px;
 }
 
 .history__full img {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+@media (max-width: 1200px) {
+  .history__content {
+    margin-left: 0;
+  }
+  .history__chronology {
+    display: none;
+  }
 }
 
 .content__img {
@@ -1459,11 +1477,16 @@ h1, h2, h3, h4, h5, h6 {
 
 .content__img_r {
   float: right;
-  margin: 10px 0 10px 57px;
+  margin: 10px 0 10px 55px;
 }
 
 .content__img_l {
   float: left;
-  margin-right: 50px;
-  margin: 50px 50px 60px 0;
+  margin: 10px 55px 10px 0;
+}
+
+@media (max-width: 900px) {
+  .content__img {
+    width: 40vh;
+  }
 }
