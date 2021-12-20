@@ -724,7 +724,7 @@ body::-webkit-scrollbar-thumb {
       background: none;
       display: flex;
       flex-direction: column;
-      flex: 0 1 25%;
+      flex: -1 1 25%;
       justify-content: flex-start;
       padding: 20px 15px;
       max-width: 260px;
