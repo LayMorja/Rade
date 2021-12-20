@@ -238,9 +238,9 @@ body::-webkit-scrollbar-thumb {
 .column {
    &__title {
       z-index: 0;
-      position: relative;
-      font-size: 48px;
-      line-height: 89px;
+      position: relative;      
+      @include adaptiv-font(48, 30);
+      @include adaptiv-lh(89, 38);
       padding: 0px 10px 10px 0px;
       color: #fff;
       &:after {
@@ -290,8 +290,6 @@ body::-webkit-scrollbar-thumb {
    @media (max-width: 800px) {
       &__title {
          text-align: center;
-         // font-size: 42px;
-         // line-height: 50px;
          padding: 0 0 20px 0;
          &:after {
             bottom: 25px;
@@ -302,7 +300,6 @@ body::-webkit-scrollbar-thumb {
          text-transform: none;
          font-size: 16px;
          line-height: 16px;
-         padding: 0 20px;
          p {
             padding-bottom: 10px;
          }
@@ -518,7 +515,7 @@ body::-webkit-scrollbar-thumb {
    }
    @media (max-width: 1440px) {
       &__title {
-         padding: 0px 0px 0px 0px;
+         padding: 0px;
       }
    }
    @media (max-width: 800px) {
@@ -530,6 +527,13 @@ body::-webkit-scrollbar-thumb {
             margin-right: 0;
          }
          margin: 20px 0;
+      }
+      &__title-box {
+         flex-direction: column;
+         align-items: center;
+         svg {
+            padding: 10px 0 10px 0;
+         }
       }
       &__title {
          // font-size: 48px;
@@ -612,9 +616,9 @@ body::-webkit-scrollbar-thumb {
 }
 .idea {
    padding: 32px 38px;
-   &__title {
-      font-size: 28px;
-      line-height: 41px;
+   &__title {      
+      @include adaptiv-font(28, 26);
+      @include adaptiv-lh(41, 35);
       color: #FFFFFF;
       padding-bottom: 11px;
    }
@@ -634,8 +638,8 @@ body::-webkit-scrollbar-thumb {
       background: #FFF9E8;
       border-radius: 40px;
       font-weight: 500;
-      font-size: 18px;
-      line-height: 22px;
+      @include adaptiv-font(18, 14);
+      @include adaptiv-lh(22, 18);      
       color: #494949;
       padding: 10px 20px;
       margin-bottom: 14px;
@@ -657,8 +661,7 @@ body::-webkit-scrollbar-thumb {
       background: #2D7E97;
       border-radius: 23px;
       font-family: Oswald;
-      font-size: 24px;
-      // text-align: center;
+      @include adaptiv-font(24, 20);
       color: #FFFFFF;
       padding: 0px 15px 7px 15px;
       transition: all 0.3s ease-in-out;
@@ -784,8 +787,8 @@ body::-webkit-scrollbar-thumb {
 
    &__label {
       font-weight: bold;
-      font-size: 18px;
-      line-height: 22px;
+      @include adaptiv-font(18, 16);
+      @include adaptiv-lh(22, 18);
       color: #D9F2FF;
       padding-bottom: 8px;
    }
@@ -805,8 +808,8 @@ body::-webkit-scrollbar-thumb {
    &__content {
       p, a {
          font-weight: 500;
-         font-size: 14px;
-         line-height: 17px;
+         @include adaptiv-font(14, 12);
+         @include adaptiv-lh(17, 14);
          color: #D9F2FF;
       }
       a {

@@ -78,6 +78,9 @@
             &:last-child {
                // border-radius: 0 5px 5px 0;
                border-right: 1px solid #fff;
+               @media (max-width: 800px) {
+                  border: none;
+               }
                &:after {
                   display: none;
                }
@@ -85,6 +88,9 @@
             &:first-child {
                // border-radius: 5px 0 0 5px;
                border-left: 1px solid #fff;
+               @media (max-width: 800px) {
+                  border: none;
+               }
             }
             .submenu {
                display: none;
@@ -108,9 +114,15 @@
                      &.active {
                         background: rgb(97, 125, 141);
                         border-radius: 0px;
-                     }
-                     @media (max-width: 800px) {
-                        display: inline-flex;
+                     }                     
+                  }
+               }
+               @media (max-width: 800px) {
+                  border: none;
+                  li {                     
+                     a {
+                        display: flex;
+                        justify-content: center;
                      }
                   }
                }
